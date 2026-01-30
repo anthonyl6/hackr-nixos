@@ -2,7 +2,6 @@
   ...
 }: let
   allowedPorts = [
-    3000
   ];
 in {
   networking.firewall = {

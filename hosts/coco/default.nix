@@ -11,7 +11,7 @@
     ./boot.nix
   ];
 
-  networking.hostName = "hackrpc"; # Define your hostname.
+  networking.hostName = "coco"; # Define your hostname.
 
   nix.settings.experimental-features = [
     "nix-command"

@@ -23,17 +23,7 @@
     })
   ];
 
-  nix = {
-    settings = {
-      extra-substituters = [
-        "https://cache.0xhckr.dev/nix-cache/"
-      ];
-      extra-trusted-public-keys = [
-        "cache.0xhckr.dev-1:VTJYAGKFg8G5O7ia2HlJ4dDhgqoGgyq+ItpOr+UGSYw="
-      ];
-    };
-  };
-  users.users.hackr.extraGroups = ["networkmanager" "wheel"];
+  users.users.tony.extraGroups = ["networkmanager" "wheel" "libvirt"];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

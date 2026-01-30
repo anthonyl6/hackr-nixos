@@ -17,8 +17,8 @@
     enable = true;
     settings = {
       user = {
-        name = "Mohammad Al-Ahdal";
-        email = "hackr@hackr.sh";
+        name = "Anthony Loria";
+        email = "anthony@anthonyloria.dev";
       };
     };
   };

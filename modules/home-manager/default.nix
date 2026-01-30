@@ -11,7 +11,7 @@
       hostname = config.networking.hostName;
     };
     users = {
-      "hackr" = import ./links.nix;
+      "tony" = import ./links.nix;
     };
     backupFileExtension = "bak";
   };

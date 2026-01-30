@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  isFrmw = config.networking.hostName == "hackrfrmw";
+  isFrmw = config.networking.hostName == "coco";
 in {
   environment.systemPackages = with pkgs; [
     fprintd
@@ -35,7 +35,7 @@ in {
 
   programs._1password-gui = {
     enable = true;
-    polkitPolicyOwners = ["hackr"];
+    polkitPolicyOwners = ["tony"];
   };
 
   security = {
@@ -72,6 +72,10 @@ in {
         unixAuth = true;
       };
       kde = {
+        fprintAuth = false;
+        unixAuth = true;
+      };
+      sway = {
         fprintAuth = false;
         unixAuth = true;
       };

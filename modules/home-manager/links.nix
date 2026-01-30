@@ -10,8 +10,8 @@
     ./dev.nix
   ];
 
-  home.username = "hackr";
-  home.homeDirectory = "/home/hackr";
+  home.username = "tony";
+  home.homeDirectory = "/home/tony";
 
   home.stateVersion = "24.11";
   nixpkgs.config.allowUnfree = true;
@@ -25,11 +25,6 @@
     ".config/btop" = {
       force = true;
       source = ../../cfg/btop;
-      recursive = true;
-    };
-    ".config/commie" = {
-      force = true;
-      source = ../../cfg/commie;
       recursive = true;
     };
     ".config/direnv" = {

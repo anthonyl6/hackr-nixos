@@ -40,21 +40,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri-blurry = {
-      type = "github";
-      owner = "visualglitch91";
-      repo = "niri";
-      ref = "feat/blur";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # niri-blurry = {
+    #   type = "github";
+    #   owner = "visualglitch91";
+    #   repo = "niri";
+    #   ref = "feat/blur";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
-    niri-unstable = {
-      type = "github";
-      owner = "YaLTeR";
-      repo = "niri";
-      ref = "main";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # niri-unstable = {
+    #   type = "github";
+    #   owner = "YaLTeR";
+    #   repo = "niri";
+    #   ref = "main";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     nh = {
       url = "github:nix-community/nh";
@@ -84,11 +84,6 @@
 
     vicinae = {
       url = "github:vicinaehq/vicinae";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    commie = {
-      url = "github:at-mojo/commie";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -123,6 +118,6 @@
           system = "x86_64-linux";
         };
       };
-    }) ["hackrpc" "hackrfrmw" "hackrwork"]);
+    }) ["coco"]);
   };
 }

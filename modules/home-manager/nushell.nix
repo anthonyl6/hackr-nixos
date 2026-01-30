@@ -18,7 +18,7 @@
       path add "~/.nix-profile/bin"
       path add "/run/wrappers/bin"
       path add "/var/lib/flatpak/exports/share"
-      path add "/home/hackr/.local/share/flatpak/exports/share"
+      path add "/home/tony/.local/share/flatpak/exports/share"
 
       source ./direnv.nu
 
@@ -31,7 +31,7 @@
       }
 
       def copy-to-cache [] {
-        if ($'/home/hackr/.config/nix/secret.key' | path exists) {
+        if ($'/home/tony/.config/nix/secret.key' | path exists) {
           nix store sign --recursive --key-file ~/.config/nix/secret.key /run/current-system
           nix copy --to 's3://nix-cache?profile=nixbuilder&endpoint=10.0.11.2:9000&scheme=http' /run/current-system
           echo "Copied to cache"
@@ -45,7 +45,7 @@
           ${pkgs.nh}/bin/nh os switch ~/nixos
         }
         let res = $env.LAST_EXIT_CODE
-        if ((hostname) == "hackrpc" and ($res == 0)) {
+        if ((hostname) == "coco" and ($res == 0)) {
           copy-to-cache
         }
       }

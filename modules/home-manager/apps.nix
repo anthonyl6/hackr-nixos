@@ -15,9 +15,8 @@
     v3
   ];
   browsers = with pkgs; [
-    ungoogled-chromium
+    vivaldi
     firefox
-    inputs.zen-browser.packages."${system}".default
   ];
   krisp-patcher =
     pkgs.writers.writePython3Bin "krisp-patcher"
@@ -54,15 +53,17 @@ in {
       discord
       whatsapp-electron
       krisp-patcher
-      zoom-us
-      nautilus
       slack
       inputs.graphite.packages."${system}".default
       winboat
       gimp
+      blender
+      davinci-resolve
+      prismlauncher
       protonmail-desktop
+      protonvpn-gui
+      cutter
       parsec-bin
-      ryubing
       vlc
       requestly
     ]
@@ -74,10 +75,6 @@ in {
   systemd.user.settings.Manager.DefaultEnvironment = {
     DISPLAY = ":0";
     XAUTHORITY = "$HOME/.Xauthority";
-  };
-
-  programs._1password-shell-plugins = {
-    enable = true;
   };
 
   programs.zsh = {

@@ -24,12 +24,6 @@
           term_background_bright: 585b70
           term_foreground_bright: cdd6f4
         '';
-        extraEntries = ''
-          /+Windows
-          //Windows
-            protocol: efi
-            path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
-        '';
         style = {
           wallpapers = [];
           interface = {
