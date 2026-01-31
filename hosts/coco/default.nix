@@ -17,6 +17,8 @@
       "flakes"
     ];
 
+    store-dir = "/mnt/ssd/nix-store";
+
     # Build performance
     build-dir = "/mnt/ssd/nix-build"; # <-- move build dir to another drive
     max-jobs = "auto";

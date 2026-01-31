@@ -35,7 +35,7 @@
     };
 
   # ssd
-  fileSystems."/mnt/nvme" = 
+  fileSystems."/mnt/ssd" = 
     { device = "/dev/disk/by-uuid/44e264e5-07e3-49ec-8345-7002973c4e3e";
       fsType = "ext4";
       options = [ "noatime" ];
