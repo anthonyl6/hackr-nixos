@@ -112,7 +112,20 @@
     nixosConfigurations = builtins.listToAttrs (map (name: {
       name = name;
       value = nixpkgs.lib.nixosSystem {
-        modules = [./hosts/${name}];
+        modules = [
+          ({ ... }: {
+            nixpkgs.overlays = [
+              (final: prev: {
+                xdg-desktop-portal = prev.xdg-desktop-portal.overrideAttrs (_: {
+                  doCheck = false;
+                });
+              })
+            ];
+          })
+
+          ./hosts/${name}
+        ];
+
         specialArgs = {
           inherit inputs;
           system = "x86_64-linux";
