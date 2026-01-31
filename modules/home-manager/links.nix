@@ -42,13 +42,13 @@
       source = ../../cfg/ghostty;
       recursive = true;
     };
-    ".config/sway/delayed" = {
+    ".config/xfce/delayed" = {
       force = true;
-      source = ../../cfg/sway/delayed;
+      source = ../../cfg/xfce/delayed;
     };
-    ".config/sway/background" = {
+    ".config/xfce/background" = {
       force = true;
-      source = ../../cfg/sway/background;
+      source = ../../cfg/xfce/background;
     };
     ".config/noctalia" = {
       force = true;

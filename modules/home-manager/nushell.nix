@@ -98,7 +98,9 @@
       }
 
       def point-and-kill [] {
-        let appPID = ${pkgs.sway}/bin/sway msg pick-window | grep "PID:" | str replace "PID: " "" | into int
+        let appPID = ${
+          pkgs.xfce.xfce4-panel
+        }/bin/xfce4-panel --plugin-event=pick-window | grep "PID:" | str replace "PID: " "" | into int
         kill -9 $appPID
       }
 

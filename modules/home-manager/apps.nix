@@ -4,16 +4,12 @@
   system,
   ...
 }: let
-  jetbrainsApps = with pkgs.jetbrains; [
-    datagrip
-    rider
-    rust-rover
-    idea
-  ];
-  # NOTE: requires manual download of affinity apps.
-  affinityApps = with inputs.affinity-nix.packages."${system}"; [
-    v3
-  ];
+  # jetbrainsApps = with pkgs.jetbrains; [
+  #   datagrip
+  #   rider
+  #   rust-rover
+  #   idea
+  # ];
   browsers = with pkgs; [
     vivaldi
     firefox
@@ -49,12 +45,10 @@ in {
     [
       spotify
       obsidian
-      fontforge
       discord
       whatsapp-electron
       krisp-patcher
       slack
-      inputs.graphite.packages."${system}".default
       winboat
       gimp
       blender
@@ -63,12 +57,9 @@ in {
       protonmail-desktop
       protonvpn-gui
       cutter
-      parsec-bin
       vlc
       requestly
     ]
-    ++ jetbrainsApps
-    ++ affinityApps
     ++ browsers;
 
   # needed for vicinae to properly launch x apps in niri

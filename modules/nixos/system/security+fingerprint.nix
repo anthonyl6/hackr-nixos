@@ -75,7 +75,7 @@ in {
         fprintAuth = false;
         unixAuth = true;
       };
-      sway = {
+      xfce = {
         fprintAuth = false;
         unixAuth = true;
       };
