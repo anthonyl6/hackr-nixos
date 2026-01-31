@@ -34,6 +34,13 @@
       options = [ "rw" "uid=1000"];
     };
 
+  # ssd
+  fileSystems."/mnt/nvme" = 
+    { device = "/dev/disk/by-uuid/44e264e5-07e3-49ec-8345-7002973c4e3e";
+      fsType = "ext4";
+      options = [ "noatime" ];
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/fdadfbb9-ceb6-4131-857b-01cffb61c150"; }
     ];
