@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    nil
-    nixfmt
-    gcc
-    gnumake
-    nodejs
-    jdk
-    minio-client
+    # nil
+    # nixfmt
+    # gcc
+    # gnumake
+    # nodejs
+    # jdk
+    # minio-client
   ];
 
   programs.git = {

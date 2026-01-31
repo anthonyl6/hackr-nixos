@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    crush
+    # crush
   ];
   nixpkgs.config.allowUnfree = true;
 }
