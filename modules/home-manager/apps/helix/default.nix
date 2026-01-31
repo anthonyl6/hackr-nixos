@@ -11,8 +11,6 @@
   ];
 
   languageServers = with pkgs; [
-    # rust
-    rust-analyzer
     # nix
     nil
     # typescript + javascript + tsx + jsx
@@ -59,9 +57,9 @@ in {
   home.packages = with pkgs;
     [
       inputs.helix.packages."${system}".default
-    ]
-    ++ debuggers
-    ++ languageServers
-    ++ formatters
-    ++ formattersWithLanguageServers;
+    ];
+    # ++ debuggers
+    # ++ languageServers
+    # ++ formatters
+    # ++ formattersWithLanguageServers;
 }
