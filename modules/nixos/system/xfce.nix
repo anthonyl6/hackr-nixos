@@ -12,12 +12,13 @@
     mako # Notification utility.
   ];
 
-  programs.sway = {
+  services.xserver = {
     enable = true;
-    wrapperFeatures.gtk = true;
+    desktopManager = {
+      xterm.enable = false;
+      xfce.enable = true;
+    };
   };
 
-  services.gnome.gnome-keyring.enable = true;
-
-  services.displayManager.defaultSession = lib.mkForce "sway";
+  services.displayManager.defaultSession = lib.mkForce "xfce";
 }

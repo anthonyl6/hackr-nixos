@@ -6,7 +6,7 @@ nohup 1password --silent 2>&1 > /dev/null &
 disown
 
 # launch discord on home pc
-if [ "$(hostname)" = "hackrpc" ] || [ "$(hostname)" = "hackrfrmw" ]; then
+if [ "$(hostname)" = "coco" ]; then
     krisplocation=$(find ~/.config/discord -name "discord_krisp.node")
     nohup krisp-patcher $krisplocation 2>&1 > /dev/null &
     disown

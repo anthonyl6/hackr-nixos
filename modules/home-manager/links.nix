@@ -42,26 +42,13 @@
       source = ../../cfg/ghostty;
       recursive = true;
     };
-    ".config/niri/config.kdl" = {
+    ".config/sway/delayed" = {
       force = true;
-      text = ''
-        ${builtins.readFile ../../cfg/niri/config.kdl}
-        ${
-          if hostname == "hackrwork" || hostname == "hackrfrmw"
-          then ''
-            ${builtins.readFile ../../cfg/niri/laptop-outputs.kdl}
-          ''
-          else ""
-        }
-      '';
+      source = ../../cfg/sway/delayed;
     };
-    ".config/niri/delayed" = {
+    ".config/sway/background" = {
       force = true;
-      source = ../../cfg/niri/delayed;
-    };
-    ".config/niri/background" = {
-      force = true;
-      source = ../../cfg/niri/background;
+      source = ../../cfg/sway/background;
     };
     ".config/noctalia" = {
       force = true;

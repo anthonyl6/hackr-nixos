@@ -3,7 +3,7 @@
     ./gnome.nix
     ./keyd.nix
     ./nh.nix
-    ./sway.nix
+    ./xfce.nix
     ./security+fingerprint.nix
   ];
 }
