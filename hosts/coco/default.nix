@@ -18,6 +18,7 @@
     ];
 
     # Build performance
+    build-dir = "/mnt/ssd/nix-build"; # <-- move build dir to another drive
     max-jobs = "auto";
     cores = 0;
 

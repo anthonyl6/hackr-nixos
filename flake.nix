@@ -27,15 +27,6 @@
                 });
               })
             ];
-
-            # Set Nix build temp dir to another drive (example: /mnt/bigdrive/nix-build)
-            nix.settings = {
-              build-dir = "/mnt/ssd/nix-build";
-              max-jobs = "auto";
-              cores = 0;
-              keep-outputs = false;
-              keep-derivations = false;
-            };
           })
         ];
       };
