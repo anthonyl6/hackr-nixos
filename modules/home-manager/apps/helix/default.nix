@@ -6,11 +6,6 @@
   formatters = with pkgs; [
     # nix
     alejandra
-    # rust
-    rustfmt
-    dioxus-cli
-    # zig
-    zig
     # yaml
     yamlfmt
   ];
